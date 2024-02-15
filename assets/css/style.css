@@ -1,0 +1,71 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#buttons{
+    height: 150px;
+    max-height: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    overflow-y: auto;
+}
+#buttons button{
+    min-width: 100px;
+    height: 40px;
+    background-color: #40B8B8;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+#buttons button:hover{
+    background-color: #409898;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+#addDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#add{
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+    gap: 10px;
+}
+#add label{
+    font-size: 30px;
+}
+#add input{
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#add button{
+    width: 140px;
+    height: 40px;
+    background-color: #40B8B8;
+    border: 0px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.3s;
+}
+#add button:hover{
+    border: 2px solid #40B8B8;
+    background-color: #fff;
+    color: #40B8B8;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
