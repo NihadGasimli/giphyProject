@@ -2,10 +2,12 @@ const buttons = document.querySelector("#buttons");
 let btn = document.querySelectorAll(".btn");
 const gifs = document.querySelector("#gifs");
 let input;
+const addBtn = document.querySelector("#addBtn")
 let clearBtn = document.querySelector("#clearBtn")
 var a = true;
 
-document.querySelector("#addBtn").addEventListener("click", function () {
+addBtn.addEventListener("click", function (e) {
+    e.preventDefault()
     input = document.querySelector("#addInp");
     if (input.value.trim() !== "") {
         const newButton = document.createElement("button");
@@ -13,29 +15,18 @@ document.querySelector("#addBtn").addEventListener("click", function () {
         newButton.classList.add("newButtonClass")
         newButton.classList.add("btn");
 
-        newButtonX.style.display = "none"
         newButtonX.id = "myau"
+        newButtonX.textContent = "X"
+        newButtonX.style.display = "none"
 
-        newButton.addEventListener("mouseenter", function () {
+        newButton.addEventListener("mouseover", function () {
             newButtonX.style.display = "block"
-            newButtonX.textContent = "X"
         })
         newButton.addEventListener("mouseleave", function () {
             newButtonX.style.display = "none"
-            newButtonX.textContent = "X"
         })
 
         newButtonX.addEventListener("click", function () {
-            a = false;
-            buttons.removeChild(newButton)
-            setTimeout(function () {
-                a = true;
-            }, 1)
-        })
-
-
-        clearBtn.addEventListener("click", function () {
-            input.value = ""
             a = false;
             buttons.removeChild(newButton)
             setTimeout(function () {
@@ -49,6 +40,42 @@ document.querySelector("#addBtn").addEventListener("click", function () {
         buttons.append(newButton);
     }
 });
+
+window.addEventListener("keyup", function (e) {
+    if (e.key === "Enter") {
+        input = document.querySelector("#addInp");
+        if (input.value.trim() !== "") {
+            const newButton = document.createElement("button");
+            const newButtonX = document.createElement("button");
+            newButton.classList.add("newButtonClass")
+            newButton.classList.add("btn");
+
+            newButtonX.id = "myau"
+            newButtonX.textContent = "X"
+            newButtonX.style.display = "none"
+
+            newButton.addEventListener("mouseover", function () {
+                newButtonX.style.display = "block"
+            })
+            newButton.addEventListener("mouseleave", function () {
+                newButtonX.style.display = "none"
+            })
+
+            newButtonX.addEventListener("click", function () {
+                a = false;
+                buttons.removeChild(newButton)
+                setTimeout(function () {
+                    a = true;
+                }, 1)
+            })
+
+            newButton.innerHTML = input.value;
+            input.value = "";
+            newButton.appendChild(newButtonX)
+            buttons.append(newButton);
+        }
+    }
+})
 
 function selectAllButtons() {
     btn = document.querySelectorAll(".btn");

@@ -89,24 +89,6 @@ body {
     cursor: pointer;
 }
 
-#clearBtn {
-    width: 50px;
-    background-color: red;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    display: none;
-    transition: 0.3s;
-}
-
-#clearBtn:hover {
-    background-color: #fff;
-    border: 2px solid red;
-    color: red;
-    transition: 0.3s;
-}
-
-
 #gifsAndSearch {
     display: flex;
     flex-direction: row;
@@ -171,14 +153,6 @@ body {
 
     #buttons {
         justify-content: center;
-    }
-
-    #buttons #myau {
-        display: none;
-    }
-
-    #clearBtn {
-        display: block;
     }
 
 }
