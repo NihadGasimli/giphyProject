@@ -31,6 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    position: relative;
 }
 
 #buttons button:hover {
@@ -68,7 +69,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#add button {
+#add #addBtn {
     width: 140px;
     height: 40px;
     background-color: #40B8B8;
@@ -80,13 +81,31 @@ body {
     transition: 0.3s;
 }
 
-#add button:hover {
+#add #addBtn:hover {
     border: 2px solid #40B8B8;
     background-color: #fff;
     color: #40B8B8;
     transition: 0.3s;
     cursor: pointer;
 }
+
+#clearBtn {
+    width: 50px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    display: none;
+    transition: 0.3s;
+}
+
+#clearBtn:hover {
+    background-color: #fff;
+    border: 2px solid red;
+    color: red;
+    transition: 0.3s;
+}
+
 
 #gifsAndSearch {
     display: flex;
@@ -114,8 +133,8 @@ body {
     border-radius: 10px;
     color: #fff;
     position: absolute;
-    margin-left: 5%;
-    margin-bottom: 20px;
+    top: -5px;
+    right: -5px;
 }
 
 @media(max-width:780px) {
@@ -146,12 +165,20 @@ body {
     #buttons .btn {
         height: 20px;
         font-size: 12px;
-        flex-wrap: w;
+        flex-wrap: wrap;
+        min-width: 40px;
     }
 
     #buttons {
         justify-content: center;
+    }
 
+    #buttons #myau {
+        display: none;
+    }
+
+    #clearBtn {
+        display: block;
     }
 
 }

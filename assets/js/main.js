@@ -2,7 +2,7 @@ const buttons = document.querySelector("#buttons");
 let btn = document.querySelectorAll(".btn");
 const gifs = document.querySelector("#gifs");
 let input;
-
+let clearBtn = document.querySelector("#clearBtn")
 var a = true;
 
 document.querySelector("#addBtn").addEventListener("click", function () {
@@ -26,6 +26,16 @@ document.querySelector("#addBtn").addEventListener("click", function () {
         })
 
         newButtonX.addEventListener("click", function () {
+            a = false;
+            buttons.removeChild(newButton)
+            setTimeout(function () {
+                a = true;
+            }, 1)
+        })
+
+
+        clearBtn.addEventListener("click", function () {
+            input.value = ""
             a = false;
             buttons.removeChild(newButton)
             setTimeout(function () {
