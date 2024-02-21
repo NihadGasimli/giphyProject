@@ -1,4 +1,4 @@
-Giphy Project
+*Giphy Project*
 <br>
 A fun project that utilizes the Giphy API to display and search for GIFs.
 <br>
